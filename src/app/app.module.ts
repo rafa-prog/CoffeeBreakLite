@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { provideFirebaseApp, initializeApp } from '@angular/fire/app'
 import { getFirestore, provideFirestore } from '@angular/fire/firestore'
@@ -31,7 +30,6 @@ import { CadastroFuncionarioComponent } from './pages/cadastro-funcionario/cadas
 import { ComandaComponent } from './pages/comanda/comanda.component';
 import { CadastroComponent } from './pages/cadastro/cadastro.component';
 import { MaisDetalhesComponent } from './pages/mais-detalhes/mais-detalhes.component';
-import { PagamentoComponent } from './pages/pagamento/pagamento.component';
 import { EditarProdutoComponent } from './pages/editar-produto/editar-produto.component';
 import { EditarFuncionarioComponent } from './pages/editar-funcionario/editar-funcionario.component';
 
@@ -53,7 +51,6 @@ import { BrMaskerModule } from 'br-mask';
     EditarFuncionarioComponent,
     MaisDetalhesComponent,
     ComandaComponent,
-    PagamentoComponent,
   ],
   imports: [
     BrowserModule,
