@@ -26,12 +26,6 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 
 import { LoginComponent } from './pages/login/login.component';
-import { CadastroFuncionarioComponent } from './pages/cadastro-funcionario/cadastro-funcionario.component';
-import { ComandaComponent } from './pages/comanda/comanda.component';
-import { CadastroComponent } from './pages/cadastro/cadastro.component';
-import { MaisDetalhesComponent } from './pages/mais-detalhes/mais-detalhes.component';
-import { EditarProdutoComponent } from './pages/editar-produto/editar-produto.component';
-import { EditarFuncionarioComponent } from './pages/editar-funcionario/editar-funcionario.component';
 
 import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 import { MatChipsModule } from '@angular/material/chips';
@@ -44,17 +38,23 @@ import { BrMaskerModule } from 'br-mask';
     AppComponent,
     LoginComponent,
     HomeComponent,
-    CadastroComponent,
     CadastroProdutoComponent,
-    CadastroFuncionarioComponent,
-    EditarProdutoComponent,
-    EditarFuncionarioComponent,
-    MaisDetalhesComponent,
-    ComandaComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+
+    provideFirebaseApp(() => initializeApp({
+      apiKey: "AIzaSyDeWl-nzU28pzNd1OS2La9PmPcJnwkeew4",
+      authDomain: "coffeebreak-679ed.firebaseapp.com",
+      projectId: "coffeebreak-679ed",
+      storageBucket: "coffeebreak-679ed.appspot.com",
+      messagingSenderId: "1079343656038",
+      appId: "1:1079343656038:web:80d29554cd99d131ed91a7"
+    })),
+    provideFirestore(() => getFirestore()),
+    AngularFireStorageModule,
+
     MatSidenavModule,
     MatToolbarModule,
     MatIconModule,
