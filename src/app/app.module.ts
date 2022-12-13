@@ -9,7 +9,6 @@ import { getFirestore, provideFirestore } from '@angular/fire/firestore'
 
 
 import { HomeComponent } from './pages/home/home.component';
-import { CadastroProdutoComponent } from './pages/cadastro-produto/cadastro-produto.component';
 import { MatButtonModule } from '@angular/material/button';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -38,7 +37,6 @@ import { BrMaskerModule } from 'br-mask';
     AppComponent,
     LoginComponent,
     HomeComponent,
-    CadastroProdutoComponent,
   ],
   imports: [
     BrowserModule,
